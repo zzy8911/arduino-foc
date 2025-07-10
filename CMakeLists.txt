@@ -18,6 +18,8 @@ list(APPEND SRC_FILES
     "src/common/foc_utils.cpp"
     "src/current_sense/hardware_specific/esp32/esp32_mcpwm_mcu.cpp"
     "src/current_sense/hardware_specific/esp32/esp32_adc_driver.cpp"
+    "src/drivers/hardware_specific/esp32/esp32_mcpwm_mcu.cpp"
+    "src/drivers/hardware_specific/esp32/esp32_driver_mcpwm.cpp"
 )
 
 set(INC_FILES "src/common/" "src/common/base_classes/" "src/" "src/current_sense/hardware_specific/esp32/")

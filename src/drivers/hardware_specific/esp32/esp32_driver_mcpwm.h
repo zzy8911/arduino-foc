@@ -33,7 +33,7 @@ typedef struct ESP32MCPWMDriverParams {
 
 
 #define SIMPLEFOC_ESP32_DEBUG(tag, str)\
-    SimpleFOCDebug::println( "ESP32-"+String(tag)+ ": "+ String(str));
+    SimpleFOCDebug::println( "ESP32-"+std::string(tag)+ ": "+ str);
 
 #define SIMPLEFOC_ESP32_DRV_DEBUG(str)\
    SIMPLEFOC_ESP32_DEBUG("DRV", str);\
@@ -42,7 +42,7 @@ typedef struct ESP32MCPWMDriverParams {
 // if the function returns an error the function will return SIMPLEFOC_DRIVER_INIT_FAILED
 #define CHECK_ERR(func_call, message) \
   if ((func_call) != ESP_OK) { \
-    SIMPLEFOC_ESP32_DRV_DEBUG("ERROR - " + String(message)); \
+    SIMPLEFOC_ESP32_DRV_DEBUG("ERROR - " + message); \
     return SIMPLEFOC_DRIVER_INIT_FAILED; \
   }
 
